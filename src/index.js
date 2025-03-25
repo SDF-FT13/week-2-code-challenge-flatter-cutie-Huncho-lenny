@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const voteForm = document.getElementById("votes-form");
   const resetButton = document.getElementById("reset-btn");
 
-fetch("http://localhost:3000/characters")
+fetch("https://flutter-cuties-backend.vercel.app/characters") 
   .then((response) => response.json())
   .then((characters) => {
       characters.forEach((character) => {
