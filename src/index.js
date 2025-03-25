@@ -1,11 +1,11 @@
-// Your code here
+// write your code here
 document.addEventListener("DOMContentLoaded", () => {
   const characterBar = document.getElementById("character-bar");
   const detailedInfo = document.getElementById("detailed-info");
   const voteForm = document.getElementById("votes-form");
   const resetButton = document.getElementById("reset-btn");
 
-fetch("https://flutter-cuties-backend.vercel.app/characters")
+fetch("http://localhost:3000/characters")
   .then((response) => response.json())
   .then((characters) => {
       characters.forEach((character) => {
@@ -53,7 +53,7 @@ votesInput.value = "";
 resetButton.onclick = () => {
   character.votes = 0;
   voteCountElement.textContent = character.votes;
-
+se
 fetch(`http://localhost:3000/characters/${character.id}`, {
   method: "PATCH",
   headers: {
@@ -64,3 +64,4 @@ fetch(`http://localhost:3000/characters/${character.id}`, {
 };
 }
 });
+
